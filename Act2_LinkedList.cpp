@@ -1,5 +1,7 @@
 #include <iostream>
 
+//Activity #2 - 10/08/24
+
 using namespace std;
 
 struct snode
