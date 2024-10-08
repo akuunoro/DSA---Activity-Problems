@@ -1,6 +1,8 @@
 #include <iostream>
 
 //Activity #2 - 10/08/24
+/*Create a linked list where each node
+represents a single character of the string "Hello, World!“*/
 
 using namespace std;
 
