@@ -43,7 +43,7 @@ int main (){
    
     cout << "Fifth Number: ";
     cin >> n5;
-    cin.ignore();
+    
     
 
     cout << nl;
