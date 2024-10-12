@@ -24,22 +24,27 @@ void sorting ();
 int main (){
 
     int n1, n2, n3, n4, n5;
-                        
 
-
+    
     cout << "Enter 5 digits to sort" << nl << nl;
 
+    
     cout << "First Number: ";
     cin >> n1;
+    
     cout << "Second Number: ";
     cin >> n2;
+    
     cout << "Third Number: ";
     cin >> n3;
+   
     cout << "Fourth Number: ";
     cin >> n4;
+   
     cout << "Fifth Number: ";
     cin >> n5;
     cin.ignore();
+    
 
     cout << nl;
     cout << nl;
@@ -58,56 +63,22 @@ int main (){
 
 void sorting (){
 
-    int s1, s2, s3, s4, s5;
     int stemp = 0;
 
-    s1 = numberstorage[0]; 
-    s2 = numberstorage[1];
-    s3 = numberstorage[2];
-    s4 = numberstorage[3];
-    s5 = numberstorage[4];
-    
-
-    for (int fs = 0; fs < 5; fs++){
-
-        if (s2 < s1){
-            stemp = s1;
-            s1 = s2; 
-            s2 = stemp; 
+    for (int fs = 0; fs < nums - 1; fs++){
+        for (int ss = 0; ss < nums - 1 - fs; ss++){
+            if (numberstorage[ss] > numberstorage[ss + 1]){
+                stemp = numberstorage[ss];
+                numberstorage[ss] = numberstorage[ss + 1];
+                numberstorage[ss + 1] = stemp; 
+            }
         }
-
-        stemp = 0;
-
-        if (s3 < s2){
-                stemp = s2;
-                s2 = s3; 
-                s3 = stemp;
-        }
-
-        stemp = 0;
-
-        if (s4 < s3){
-                stemp = s3;
-                s3 = s4; 
-                s4 = stemp;
-        }
-
-        stemp = 0;
-
-        if (s5 < s4){
-                stemp = s4;
-                s4 = s5; 
-                s5 = stemp;
-        }
-
-        stemp = 0;
+        
     }
 
-    cout << "Sorted Numbers" << nl << nl;
-    cout << "First Number: " << s1 << nl;
-    cout << "Second Number: " << s2 << nl;
-    cout << "Third Number: " << s3 << nl;
-    cout << "Fourth Number: " << s4 << nl;
-    cout << "Fifth Number: " << s5 << nl;
-
+    cout << nl << "Sorted Numbers: " << nl << nl;
+        for(int ds = 0; ds < nums; ds++){
+            cout << ds + 1 << ": " << numberstorage[ds] << nl;
+        }
 }
+
