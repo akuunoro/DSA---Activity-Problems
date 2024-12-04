@@ -3,7 +3,7 @@
 
 using namespace std;
 /*
-ACTIVITY #4
+ACTIVITY #4..
 Your activity for today is to create a
 C++ Merge Sort algorithm. Merge Sort is a classic and 
 efficient divide-and-conquer algorithm used for sorting an
